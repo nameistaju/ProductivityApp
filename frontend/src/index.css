@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 346 100% 88%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 152 76% 80%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... keep existing code */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-foreground font-quicksand bg-[url('/images/grid-paper.png')] bg-repeat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fredoka;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply container mx-auto px-4 py-8 max-w-4xl animate-fade-in;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6 text-center text-primary;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-4 shadow-md border border-pastel-blue/30 hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .btn-pastel {
+    @apply px-4 py-2 rounded-lg shadow-sm transition-all duration-200 font-medium;
+  }
+
+  .btn-blue {
+    @apply btn-pastel bg-pastel-blue hover:bg-blue-100 text-blue-700;
+  }
+
+  .btn-pink {
+    @apply btn-pastel bg-pastel-pink hover:bg-pink-100 text-pink-700;
+  }
+
+  .btn-green {
+    @apply btn-pastel bg-pastel-green hover:bg-green-100 text-green-700;
+  }
+
+  .btn-yellow {
+    @apply btn-pastel bg-pastel-yellow hover:bg-yellow-100 text-yellow-700;
+  }
+
+  .btn-purple {
+    @apply btn-pastel bg-pastel-purple hover:bg-purple-100 text-purple-700;
+  }
+}
