@@ -10,7 +10,8 @@ import TodoPage from "./pages/TodoPage";
 import PomodoroPage from "./pages/PomodoroPage";
 import JournalPage from "./pages/JournalPage";
 import HabitPage from "./pages/HabitPage";
-import Layout from "./components/ui/Layout";
+// import Layout from "./components/ui/Layout";
+import Layout from "@/components/ui/Layout"; // ✅ correct casing for both folder and file
 
 const queryClient = new QueryClient();
 
