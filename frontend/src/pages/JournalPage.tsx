@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Calendar, Save, Printer, Trash2 } from 'lucide-react';
-import { toast } from '@/components/ui/sonner';
+import { toast } from '@/components/UI/sonner';
 
 interface JournalEntry {
   id: string;
